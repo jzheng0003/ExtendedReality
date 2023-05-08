@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Getting Started with VR</title>
+    <meta name="description" content="Getting Started with VR">
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+          <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+          <img id="skyTexture" src="./52834316891_4d2eb9fede_o.jpg">
+          <img id="groundTexture" src="https://www.filterforge.com/filters/629-diffuse.jpg">
+        </a-assets>
+        <a-box id="box1" src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2" animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
+        <a-sky src="#skyTexture"></a-sky>
+
+        <!-- <a-plane id="ground" src="#groundTexture" rotation="-90 0 0" width="30" height="30"
+        repeat="50 50"></a-plane> -->
+
+        <a-light type="ambient" color="#445451"></a-light>
+        
+        <a-camera>
+            <a-cursor color="red"></a-cursor>
+        </a-camera>
+
+      </a-scene>
+  </body>
+</html>
